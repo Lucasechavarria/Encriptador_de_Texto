@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encriptador de texto</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="title-container">
+        <h1>ENCRIPTADOR DE TEXTO</h1>
+    </div>
+    <div class="switch-container">
+      <label class="switch">
+        <input type="checkbox" id="mode-switch">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </header>
+  <div class="contenedor">
+    <div class="entrada">
+      <textarea id="texto" rows="10" cols="30" placeholder="Ingrese el texto"></textarea>
+      <button id="encriptar">Encriptar</button>
+    </div>    
+    <div class="acciones">
+      <button id="limpiar">Limpiar</button>
+      <button id="mostrar-entrada" class="mostrar-ocultar">👁️</button>
+      <button id="copiar">Copiar</button>
+    </div>
+    <div class="salida">
+      <textarea id="texto-encriptado" rows="10" cols="30" readonly placeholder="Texto encriptado"></textarea>
+      <button id="desencriptar">Desencriptar</button>
+    </div>
+  </div>
+  <p class="aviso">¡Solo letras minúsculas y sin acentos!</p>
+  <footer>Creado por Lucas Echavarria</footer>
+  <script src="script.js"></script>
+</body>
+</html>
