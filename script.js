@@ -10,6 +10,11 @@ let entradaOculta = false;
 let textoOriginal = '';
 let textoEncriptadoOriginal = '';
 
+// Función para convertir texto a minúsculas
+const convertirAMinusculas = (texto) => {
+  return texto.toLowerCase();
+};
+
 // Función para encriptar texto
 const encriptarTexto = (texto) => {
   const llaves = {
@@ -49,7 +54,7 @@ const validarTexto = (texto) => {
 
 // Evento para el botón de encriptar
 encriptar.addEventListener('click', () => {
-  const textoValor = texto.value.trim();
+  let textoValor = convertirAMinusculas(texto.value.trim());
   if (!validarTexto(textoValor)) {
     alert('Solo acepta texto en minúsculas, sin acentos ni caracteres especiales');
     return;
@@ -60,7 +65,7 @@ encriptar.addEventListener('click', () => {
 
 // Evento para el botón de desencriptar
 desencriptar.addEventListener('click', () => {
-  const textoValor = textoEncriptado.value.trim();
+  let textoValor = convertirAMinusculas(textoEncriptado.value.trim());
   if (!validarTexto(textoValor)) {
     alert('Solo acepta texto en minúsculas, sin acentos ni caracteres especiales');
     return;
